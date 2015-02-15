@@ -20,4 +20,9 @@ class Order
     end
   end
 
+  def add_dish(item, amount)
+    selected_dishes << item
+    selected_quantities << amount
+  end
+
 end
