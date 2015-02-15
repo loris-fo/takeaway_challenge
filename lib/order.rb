@@ -25,4 +25,8 @@ class Order
     selected_quantities << amount
   end
 
+    def cost(item, amount)
+    amount * $dishes[item].to_i
+  end
+
 end

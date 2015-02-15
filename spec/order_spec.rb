@@ -17,4 +17,13 @@ let(:order)  {Order.new}
 		expect(order.selected_dishes).to eq (["pesto"])
 	end
 
+	it 'should be able to add quantities' do
+		order.add_dish("pesto", 5)
+		expect(order.selected_quantities).to eq([5])
+	end
+
+	it 'should be able to calculate the cost of the order' do
+		expect(order.cost("carbonara",3)).to eq (33)
+	end
+
 end
