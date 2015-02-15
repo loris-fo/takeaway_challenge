@@ -8,4 +8,8 @@ let(:order)  {Order.new}
 		expect(order.dishes_choice.length).to eq (4)
 	end
 
+	it 'should set the order items to 0' do
+		expect(order.order_count).to eq (0)
+	end
+
 end
