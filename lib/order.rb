@@ -4,6 +4,12 @@ class Order
     $dishes = {"carbonara" => 11, "bolognesa" => 9, "pesto" => 10, "sea food" => 13}
   end
 
+  def menu_list
+   puts "here is the list of the menu:"
+   $dishes.each {|k, v| puts "#{k}: #{v}"}
+   puts "Please choose the items you'd like to purchase by entering the name of the item followed by the quantity."
+  end
+
   def selected_dishes
     @items ||= []
   end
